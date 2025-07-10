@@ -12,6 +12,7 @@ body {
     line-height: 1.6;
 }
 
+/* Container stays centered and fluid */
 .container {
     width: 90%;
     max-width: 900px;
@@ -19,6 +20,7 @@ body {
     padding: 20px 0;
 }
 
+/* Header styling */
 header {
     background: #002147;
     color: #fff;
@@ -30,10 +32,14 @@ header h1 {
     font-size: 2.5em;
 }
 
+/* Navigation links */
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap; /* allow wrapping on small screens */
     gap: 20px;
+    justify-content: center; /* center nav items */
+    padding: 0;
 }
 
 nav a {
@@ -47,6 +53,7 @@ nav a:hover {
     color: #ffb300;
 }
 
+/* Main content sections */
 main section {
     background: #fff;
     margin-bottom: 20px;
@@ -60,22 +67,30 @@ h2 {
     margin-bottom: 10px;
 }
 
+/* Lists inside sections */
 ul {
     margin-left: 20px;
 }
 
+/* Form styling */
 form {
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap; /* allow stacking on small screens */
+    gap: 10px;
 }
 
+/* Email input */
 input[type="email"] {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 250px;
-    margin-right: 10px;
+    flex: 1 1 auto; /* allow flexible width */
+    min-width: 200px;
 }
 
+/* Buttons */
 button {
     padding: 8px 16px;
     background: #002147;
@@ -92,6 +107,7 @@ button:hover {
     color: #002147;
 }
 
+/* Footer */
 footer {
     background: #002147;
     color: #fff;
@@ -100,3 +116,50 @@ footer {
     margin-top: 30px;
     font-size: 1em;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    main section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input[type="email"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
