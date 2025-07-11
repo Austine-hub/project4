@@ -1,0 +1,165 @@
+/* === BASE === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* === HEADER / BRANDING === */
+.topbar {
+  background-color: #00264d;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.brand-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.brand-tagline {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #e0e0e0;
+}
+
+/* === NAVIGATION === */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #003366;
+  padding: 1rem 0;
+}
+
+.nav-btn {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-btn:hover,
+.nav-btn-selected {
+  color: #00bfff;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f4f8fb;
+}
+
+.hero-section h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #005ea2;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #004080;
+}
+
+/* === DIVISION SHOWCASE === */
+.division-showcase {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.division-showcase h3 {
+  font-size: 1.6rem;
+  color: #003366;
+  margin-bottom: 2rem;
+}
+
+.division-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.division-card {
+  background-color: #e6f2ff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.1);
+  font-weight: bold;
+  color: #00264d;
+}
+
+/* === COMPANY OVERVIEW === */
+.company-overview {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background-color: #f9fbfd;
+  border-left: 5px solid #005ea2;
+  padding: 1.5rem 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 500;
+  color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.08);
+  border-radius: 6px;
+  font-family: 'Segoe UI', sans-serif;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.company-overview-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.company-overview.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #00264d;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* === SCROLL ANIMATION SCRIPT === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
