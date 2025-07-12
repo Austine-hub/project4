@@ -1,13 +1,6 @@
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  const overview = document.getElementById('companyOverview');
-  if (overview) observer.observe(overview);
+  function changeShot(imgName) {
+      document.getElementById('main-shot').src = imgName;
+      document.getElementById('shot-description').textContent = imgName.split('.')[0].replace('-', ' ');
+    }
 
