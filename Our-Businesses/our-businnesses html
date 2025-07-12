@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Grid Structure</title>
+  <link rel="stylesheet" href="our-businesses.css">
+</head>
+<body>
+  <main class="card-grid">
+    <div class="card card-tall"></div>
+    <div class="card card-wide"></div>
+    <div class="card card-tall"></div>
+    <div class="card card-tall"></div>
+    <div class="card card-wide"></div>
+    <div class="card card-tall"></div>
+  </main>
+</body>
+</html>
