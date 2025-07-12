@@ -1,0 +1,135 @@
+/* === VARIABLES === */
+:root {
+  --green: #008037;
+  --dark-green: #005026;
+  --white: #ffffff;
+  --gray: #f5f5f5;
+  --text: #222;
+  --primary-font: 'Poppins', sans-serif;
+}
+
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--text);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+/* === CONTAINERS === */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background-color: var(--white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.logo span {
+  color: var(--dark-green);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--green);
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: var(--dark-green);
+}
+
+/* === HERO SECTION === */
+.hero {
+  background-color: var(--gray);
+  padding: 4rem 0;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media(min-width: 768px) {
+  .hero .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.primary-btn {
+  background-color: var(--green);
+}
+
+/* === HERO IMAGE === */
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: var(--dark-green);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 4rem;
+}
