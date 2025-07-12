@@ -539,3 +539,128 @@ body {
         width: 100%;
     }
 }
+
+
+
+/* This file includes responsive enhancements, a collapsible hamburger nav, and smooth animations, without altering the original architecture */
+
+/* ==== 1. HAMBURGER NAVIGATION ==== */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Toggle Nav */
+.main-nav.active {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 999;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.main-nav.active ul {
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-nav.active li {
+  margin: 15px 0;
+}
+
+/* ==== 2. ANIMATIONS ==== */
+
+.btn,
+.main-nav a,
+.read-more,
+.footer-column a,
+.social-links a {
+  transition: all 0.3s ease;
+}
+
+.product-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-content {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==== 3. RESPONSIVE ENHANCEMENTS ==== */
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .main-header .container {
+    flex-wrap: wrap;
+  }
+
+  .main-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .promo-content h2 {
+    font-size: 24px;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .app-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ==== 4. ACCESSIBILITY UTILITIES ==== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
