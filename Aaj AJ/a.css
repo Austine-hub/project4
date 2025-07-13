@@ -595,3 +595,37 @@ body {
   }
 }
 
+
+
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Optional: add spacing between wrapped items */
+}
+
+/* On smaller screens, stack the nav vertically */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav li {
+    width: 100%;
+  }
+  .header-actions {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
