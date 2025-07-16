@@ -35,12 +35,13 @@ body {
 }
 
 .container {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  width: 100%;
   box-sizing: border-box;
 }
+
 
 /* === BUTTONS === */
 .btn {
@@ -547,6 +548,30 @@ body {
     transform: translateY(0);
   }
 }
+
+
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 
 /* === RESPONSIVE BREAKPOINTS === */
 @media (max-width: 992px) {
