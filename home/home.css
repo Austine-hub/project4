@@ -658,3 +658,30 @@ body {
   white-space: nowrap;
   border: 0;
 }
+
+/* ALWAYS SHOW ON DESKTOP */
+.main-nav {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* MOBILE VIEW ONLY: hide unless active */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+  .main-nav.active {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 999;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+}
